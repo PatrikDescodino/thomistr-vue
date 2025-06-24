@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Typography - Barbershop Fonts */
+@layer base {
+  html {
+    font-family: 'Merriweather', serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6, .heading {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+  }
+  
+  .vintage-heading {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+  
+  .elegant-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+}
+
+/* Section Background Variants - Darker theme */
+@layer components {
+  .section-dark {
+    @apply bg-gray-950 relative;
+  }
+  
+  .section-dark-alt {
+    @apply bg-gray-900 relative;
+  }
+  
+  .section-dark-subtle {
+    @apply bg-gray-850 relative;
+  }
+  
+  .section-dark-deep {
+    @apply bg-black relative;
+  }
+  
+  /* Enhanced gradient overlays for smooth section transitions */
+  .section-dark::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, rgba(23, 25, 35, 0.6));
+    pointer-events: none;
+  }
+  
+  .section-dark-alt::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, rgba(13, 17, 23, 0.6));
+    pointer-events: none;
+  }
+  
+  .section-dark-subtle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, rgba(23, 25, 35, 0.5));
+    pointer-events: none;
+  }
+}
+
+/* Button Components - Oldschool Style */
+@layer components {
+  /* Service Card Styling */
+  .service-card {
+    @apply bg-dark-800/30 backdrop-blur-sm relative;
+  }
+  
+  .service-card:hover {
+    @apply bg-dark-800/50;
+  }
+  
+  .service-card:hover .absolute.h-0\.5 {
+    @apply bg-gradient-to-r from-gold-300 via-gold-500 to-gold-300;
+  }
+  
+  /* Button Styles */
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center px-6 py-3 font-semibold text-white bg-gold-600 hover:bg-gold-800 border-2 border-white/40 hover:border-white/60 rounded transition-colors duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+    font-family: 'Merriweather', serif;
+  }
+  
+  .btn-secondary {
+    @apply relative inline-flex items-center justify-center px-6 py-3 font-semibold text-gray-300 bg-gray-700 hover:bg-gray-900 hover:text-white border-2 border-white/40 hover:border-white/60 rounded transition-colors duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+    font-family: 'Merriweather', serif;
+  }
+  
+  .btn-outline {
+    @apply relative inline-flex items-center justify-center px-6 py-3 font-semibold text-gold-400 bg-transparent border-2 border-gold-600 hover:bg-gold-600 hover:text-white hover:border-gold-700 rounded transition-colors duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+    font-family: 'Merriweather', serif;
+  }
+  
+  .btn-ghost {
+    @apply relative inline-flex items-center justify-center px-6 py-3 font-semibold text-gray-300 bg-transparent hover:bg-gray-800 hover:text-white border-2 border-white/40 hover:border-white/60 rounded transition-colors duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+    font-family: 'Merriweather', serif;
+  }
+  
+  .btn-danger {
+    @apply relative inline-flex items-center justify-center px-6 py-3 font-semibold text-white bg-red-600 hover:bg-red-800 border-2 border-white/40 hover:border-white/60 rounded transition-colors duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+    font-family: 'Merriweather', serif;
+  }
+  
+  /* Button sizes */
+  .btn-sm {
+    @apply px-3 py-2 text-sm;
+  }
+  
+  .btn-lg {
+    @apply px-8 py-4 text-lg;
+  }
+  
+  .btn-xl {
+    @apply px-10 py-5 text-xl;
+  }
+  
+  /* Button states */
+  .btn-full {
+    @apply w-full;
+  }
+  
+  .btn-disabled {
+    @apply opacity-50 cursor-not-allowed pointer-events-none;
+  }
+}
