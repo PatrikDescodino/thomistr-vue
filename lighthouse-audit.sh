@@ -12,8 +12,8 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-# URL pro testování (změň na produkční)
-BASE_URL="http://localhost:3000"
+# URL pro testování - GitHub Codespaces
+BASE_URL="https://didactic-sniffle-v6wqv5v77975hprp-3000.app.github.dev"
 PROD_URL="https://barbershopthomistr.cz"
 
 # Vytvoření složky pro výsledky
@@ -37,10 +37,10 @@ for i in "${!PAGES[@]}"; do
     echo -e "\n${YELLOW}🔍 Audituju: ${URL}${NC}"
     
     # Lighthouse audit s důležitými metrikami
-    lighthouse "$URL" \
+    npx lighthouse "$URL" \
         --output=html,json \
         --output-path="./lighthouse-reports/${NAME}" \
-        --chrome-flags="--headless --no-sandbox --disable-gpu" \
+        --chrome-flags="--headless --no-sandbox --disable-gpu --disable-dev-shm-usage" \
         --preset=desktop \
         --throttling-method=devtools \
         --only-categories=performance,accessibility,best-practices,seo \

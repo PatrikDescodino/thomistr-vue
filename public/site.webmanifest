@@ -1,6 +1,9 @@
 {
-  "name": "Thomistr Barber Shop",
+  "name": "Barber Shop Thomistr",
   "short_name": "Thomistr",
+  "description": "Kvalitní pánské střihy v přátelském prostředí v centru Kralovic",
+  "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -13,9 +16,24 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    },
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
   "theme_color": "#D4A942",
-  "background_color": "#000000",
-  "display": "standalone"
+  "background_color": "#080A0D",
+  "display": "standalone",
+  "orientation": "portrait",
+  "lang": "cs",
+  "dir": "ltr"
 }
