@@ -3,10 +3,14 @@
     <!-- Navigation -->
     <nav class="bg-dark-950/95 backdrop-blur-sm shadow-2xl sticky top-0 z-50 border-b border-gold-600/20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
+        <div class="flex justify-between items-center h-24">
           <div class="flex items-center">
             <NuxtLink to="/" class="flex-shrink-0 flex items-center">
-              <span class="text-2xl font-bold text-gold-400">Thomistr</span>
+              <img 
+                src="images/logo.png" 
+                alt="Barber Shop Thomistr Logo" 
+                class="h-[90px] w-auto"
+              />
             </NuxtLink>
           </div>
           
@@ -103,36 +107,84 @@
     <footer class="bg-gray-800 text-white">
       <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Barber Shop Thomistr</h3>
-            <p class="text-gray-300">Kvalitní pánské střihy a úprava vousů v přátelském prostředí v Kralovicích.</p>
+          <!-- Logo a popis -->
+          <div class="flex flex-col items-center md:items-start">
+            <img 
+              src="/logo.png" 
+              alt="Barber Shop Thomistr Logo" 
+              class="h-[130px] w-auto mb-4"
+            />
+            <p class="text-gray-300 text-center md:text-left">
+              Kvalitní pánské střihy v přátelském prostředí v centru Kralovic.
+            </p>
           </div>
+
+          <!-- Kontakt a umístění -->
           <div>
-            <h3 class="text-lg font-semibold mb-4">Kontakt</h3>
-            <p class="text-gray-300">nám. Osvobození 84</p>
-            <p class="text-gray-300">331 41 Kralovice</p>
-            <p class="text-gray-300">+420 733 666 092</p>
+            <h3 class="text-lg font-semibold mb-4">Kontakt a umístění</h3>
+            <div class="space-y-2">
+              <a 
+                href="https://maps.app.goo.gl/zvWAfxumAAywWdi76"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block text-gray-300 hover:text-gold-400 transition-colors"
+              >
+                nám. Osvobození 84<br>
+                331 41 Kralovice
+              </a>
+              <a 
+                href="tel:+420733666092"
+                class="block text-gray-300 hover:text-gold-400 transition-colors"
+              >
+                +420 733 666 092
+              </a>
+            </div>
           </div>
+
+          <!-- Sociální sítě -->
           <div>
             <h3 class="text-lg font-semibold mb-4">Sledujte nás</h3>
-            <div class="flex space-x-4">
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                <span class="sr-only">Facebook</span>
-                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+            <div class="flex flex-col space-y-3">
+              <a 
+                href="https://www.facebook.com/profile.php?id=100094267122693"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center text-gray-300 hover:text-gold-400 transition-colors"
+              >
+                <svg class="h-6 w-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                 </svg>
+                Facebook
               </a>
-              <a href="#" class="text-gray-300 hover:text-white transition-colors">
-                <span class="sr-only">Instagram</span>
-                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <a 
+                href="https://www.instagram.com/thomistr_barber/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center text-gray-300 hover:text-gold-400 transition-colors"
+              >
+                <svg class="h-6 w-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.621 5.367 11.988 11.988 11.988s11.987-5.367 11.987-11.988C24.014 5.367 18.647.001 12.017.001zM8.448 16.988c-1.297 0-2.448-1.151-2.448-2.448s1.151-2.448 2.448-2.448 2.448 1.151 2.448 2.448-1.151 2.448-2.448 2.448zm7.139 0c-1.297 0-2.448-1.151-2.448-2.448s1.151-2.448 2.448-2.448 2.448 1.151 2.448 2.448-1.151 2.448-2.448 2.448z"/>
                 </svg>
+                Instagram
               </a>
             </div>
           </div>
         </div>
+
+        <!-- Copyright section -->
         <div class="mt-8 border-t border-gray-700 pt-8">
-          <p class="text-center text-gray-300">&copy; 2024 Barber Shop Thomistr. Všechna práva vyhrazena.</p>
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-center md:text-left text-gray-300">
+              © 2025 Barber Shop Thomistr. Všechna práva vyhrazena.
+            </p>
+            <div class="mt-4 md:mt-0">
+              <img 
+                src="images/vytvořili.png" 
+                alt="Vytvořili" 
+                class="h-8 w-auto"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </footer>
