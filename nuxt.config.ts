@@ -32,10 +32,10 @@ export default defineNuxtConfig({
         { property: 'og:title', content: 'Barber Shop Thomistr | Pánský holič Kralovice' },
         { property: 'og:description', content: 'Kvalitní pánské střihy, úprava vousů a přátelský přístup v Kralovicích. Rezervuj si svůj fresh cut ještě dnes!' },
         { property: 'og:url', content: 'https://barbershopthomistr.cz' },
-        { property: 'og:image', content: 'https://barbershopthomistr.cz/og-image.jpg' },
+        { property: 'og:image', content: 'https://barbershopthomistr.cz/og-image.png' },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
-        { property: 'og:image:alt', content: 'Barber Shop Thomistr - Interiér barbershopu v Kralovicích' },
+        { property: 'og:image:alt', content: 'Barber Shop Thomistr - Kvalitní holičské práce v Kralovicích' },
         { property: 'og:locale', content: 'cs_CZ' },
         
         // Facebook specific
@@ -47,8 +47,8 @@ export default defineNuxtConfig({
         { name: 'twitter:creator', content: '@thomistr_barber' },
         { name: 'twitter:title', content: 'Barber Shop Thomistr | Pánský holič Kralovice' },
         { name: 'twitter:description', content: 'Kvalitní pánské střihy, úprava vousů a přátelský přístup v Kralovicích. Rezervuj si svůj fresh cut ještě dnes!' },
-        { name: 'twitter:image', content: 'https://barbershopthomistr.cz/og-image.jpg' },
-        { name: 'twitter:image:alt', content: 'Barber Shop Thomistr - Interiér barbershopu v Kralovicích' },
+        { name: 'twitter:image', content: 'https://barbershopthomistr.cz/og-image.png' },
+        { name: 'twitter:image:alt', content: 'Barber Shop Thomistr - Kvalitní holičské práce v Kralovicích' },
         
         // Business/Local SEO
         { name: 'geo.region', content: 'CZ-PL' },
@@ -62,7 +62,7 @@ export default defineNuxtConfig({
         { name: 'googlebot', content: 'index, follow' }
       ],
       link: [
-        // Favicons
+        // Favicons - všechny v /public/ root
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },

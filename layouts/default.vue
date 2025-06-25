@@ -1,13 +1,13 @@
 <template>
   <div class="min-h-screen bg-dark-900">
     <!-- Navigation -->
-    <nav class="bg-dark-950/95 backdrop-blur-sm shadow-2xl sticky top-0 z-50 border-b border-gold-600/20">
+    <nav class="backdrop-blur-sm shadow-2xl sticky top-0 z-50 border-b border-gold-600/20" style="background-color: #080A0D;">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-24">
           <div class="flex items-center">
             <NuxtLink to="/" class="flex-shrink-0 flex items-center">
               <img 
-                src="images/logo.png" 
+                src="/images/Logo.png" 
                 alt="Barber Shop Thomistr Logo" 
                 class="h-[90px] w-auto"
               />
@@ -61,7 +61,7 @@
 
         <!-- Mobile Navigation -->
         <div v-show="mobileMenuOpen" class="md:hidden">
-          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-dark-950 border-t border-gold-600/20">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-gold-600/20" style="background-color: #080A0D;">
             <NuxtLink 
               to="/" 
               @click="mobileMenuOpen = false"
@@ -104,18 +104,30 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white">
+    <footer class="text-white" style="background-color: #080A0D;">
       <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Logo a popis -->
-          <div class="flex flex-col items-center md:items-start">
-            <img 
-              src="/logo.png" 
-              alt="Barber Shop Thomistr Logo" 
-              class="h-[130px] w-auto mb-4"
-            />
-            <p class="text-gray-300 text-center md:text-left">
-              Kvalitní pánské střihy v přátelském prostředí v centru Kralovic.
+          <!-- Google hodnocení a motto -->
+          <div class="flex flex-col items-center">
+            <h3 class="text-lg font-semibold mb-4 text-white vintage-heading">Jak nás hodnotí zákazníci</h3>
+            <div class="mb-4 text-center">
+              <div class="flex items-center justify-center mb-2">
+                <div class="flex text-gold-400 text-xl">
+                  ★★★★★
+                </div>
+                <span class="ml-2 text-white font-semibold">5.0 / 5</span>
+              </div>
+              <a 
+                href="https://www.google.com/maps/search/Barber+Shop+Thomistr+Kralovice"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-outline text-sm px-4 py-2 inline-block"
+              >
+                Ohodnoťte nás na Google
+              </a>
+            </div>
+            <p class="text-gray-300 text-center">
+              Kvalitní pánské střihy v centru Kralovic.
             </p>
           </div>
 
@@ -179,7 +191,7 @@
             </p>
             <div class="mt-4 md:mt-0">
               <img 
-                src="images/vytvořili.png" 
+                src="/images/vytvořili.png" 
                 alt="Vytvořili" 
                 class="h-8 w-auto"
               />

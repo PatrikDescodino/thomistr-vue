@@ -25,14 +25,14 @@
             {{ method.description }}
           </p>
           
-          <component 
-            :is="method.linkType" 
-            :to="method.linkType === 'NuxtLink' ? method.link : undefined"
-            :href="method.linkType === 'a' ? method.link : undefined"
+          <a
+            :href="method.link"
+            :target="method.external ? '_blank' : undefined"
+            :rel="method.external ? 'noopener noreferrer' : undefined"
             :class="method.buttonClass"
           >
             {{ method.buttonText }}
-          </component>
+          </a>
           
           <p v-if="method.additionalInfo" class="text-sm text-gray-400 mt-4" v-html="method.additionalInfo"></p>
         </div>
@@ -53,7 +53,7 @@ interface ReservationMethod {
   description: string
   icon: any
   link: string
-  linkType: 'a' | 'NuxtLink'
+  external?: boolean
   buttonText: string
   buttonClass: string
   additionalInfo?: string
@@ -66,7 +66,7 @@ const reservationMethods: ReservationMethod[] = [
     description: 'Zavolejte nám přímo a domluvte si termín osobně s naším týmem',
     icon: PhoneIcon,
     link: 'tel:+420733666092',
-    linkType: 'a',
+    external: false,
     buttonText: '+420 733 666 092',
     buttonClass: 'btn-primary',
     additionalInfo: 'Středa, Pátek: 8:00 - 17:00<br>Soboty dle domluvy'
@@ -76,8 +76,8 @@ const reservationMethods: ReservationMethod[] = [
     title: 'Přijďte osobně',
     description: 'Navštivte nás přímo v salonu. Obsloužíme vás, pokud máme volnou kapacitu',
     icon: LocationIcon,
-    link: '/kontakt',
-    linkType: 'NuxtLink',
+    link: 'https://maps.app.goo.gl/TMAkwLDMJRtXZmB68',
+    external: true,
     buttonText: 'Zobrazit adresu',
     buttonClass: 'btn-secondary',
     additionalInfo: 'nám. Osvobození 84<br>331 41 Kralovice'

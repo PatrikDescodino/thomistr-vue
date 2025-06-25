@@ -2,14 +2,24 @@
   <section class="py-20 section-dark-alt">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-8">
-        <h2 class="text-3xl font-bold text-white mb-4">Rezervační systém</h2>
+        <h2 class="text-4xl font-bold text-white mb-4">Rezervační systém</h2>
         <p class="text-lg text-gray-300">
           Vyberte si volný termín v našem online kalendáři
         </p>
       </div>
       
-      <div class="text-center">
-        <iframe src="https://barber-shop-thomistr.reservio.com" width="800px" height="500px" frameborder="0" class="rounded-lg"></iframe>
+      <div class="text-center flex justify-center">
+        <a 
+          href="https://barber-shop-thomistr.reservio.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary text-lg px-8 py-4 transform hover:scale-105 transition-transform inline-flex items-center"
+        >
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          Vytvořit rezervaci
+        </a>
       </div>
       
       <div class="mt-6 p-4 bg-gold-600/10 rounded-lg border-2 border-gold-600/30 hover:border-gold-600/50 transition-colors duration-300">
@@ -49,4 +59,14 @@ const importantInfo: ImportantInfo[] = [
     text: 'Při první návštěvě doporučujeme dorazit 5 minut před termínem'
   }
 ]
+
+// Remove Reservio script loading since we're using our own button
+// onMounted(() => {
+//   if (!document.querySelector('script[src="https://cdn.reservio.com/widget/button-bundle.js"]')) {
+//     const script = document.createElement('script')
+//     script.src = 'https://cdn.reservio.com/widget/button-bundle.js'
+//     script.async = true
+//     document.head.appendChild(script)
+//   }
+// })
 </script>
