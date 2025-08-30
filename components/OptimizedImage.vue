@@ -36,7 +36,7 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   width: 400,
-  height: 300,
+  height: 600,
   loading: 'lazy',
   isLazy: true,
   imageClass: 'w-full h-auto object-cover',

@@ -17,8 +17,7 @@ interface Service {
   id: string
   title: string
   description: string
-  priceFrom: number
-  priceTo: number
+  price:number
   duration: number
   image: string
   isPopular?: boolean
@@ -30,8 +29,7 @@ const services: Service[] = [
     id: 'classic-haircut',
     title: 'Klasický střih',
     description: 'Nadčasová elegance s moderním švihem. Precizní technika ostré břitvy v rukou mistra řemesla, doplněná o prémiové produkty. Pro muže, který ví, že pravý styl nikdy nevyjde z módy.',
-    priceFrom: Math.ceil((580 * 0.7) / 10) * 10,
-    priceTo: 580,
+    price: 580,
     duration: 45,
     image: '/images/high-fade.jpg',
     hasImage: true
@@ -40,8 +38,7 @@ const services: Service[] = [
     id: 'classic-haircut-beard',
     title: 'Klasický střih + úprava vousů',
     description: 'Dokonalá harmonie tradice a současnosti. Mistrovský střih vlasů a pečlivé tvarování vousů s použitím horkých ručníků a kvalitních olejů. Kompletní proměna gentlemana, který si zaslouží jen to nejlepší.',
-    priceFrom: Math.ceil((780 * 0.7) / 10) * 10,
-    priceTo: 780,
+    price: 780,
     duration: 70,
     image: '/images/dalsi_uprava vousu.JPG',
     isPopular: true,
@@ -51,18 +48,16 @@ const services: Service[] = [
     id: 'master-service',
     title: 'Majstršťyk služba',
     description: 'Vrchol barberského umění. Exkluzivní zážitek zahrnující vše od prémiového střihu po relaxační procedury a signature drink. Dokonalý únik od všedního dne v atmosféře naprostého luxusu.',
-    priceFrom: Math.ceil((1480 * 0.7) / 10) * 10,
-    priceTo: 1480,
+    price:1480,
     duration: 120,
-    image: '/images/interier.JPG',
-    hasImage: false
+    image: '/images/majstrstyk.JPG',
+    hasImage: true
   },
   {
     id: 'beard-trim',
     title: 'Úprava vousů',
     description: 'Umění vousů povýšené na novou úroveň. Tradiční techniky s moderním přístupem, horké ručníky a prvotřídní péče. Vaše vousy jsou vaší vizitkou - nechte je promuvit.',
-    priceFrom: Math.ceil((380 * 0.7) / 10) * 10,
-    priceTo: 380,
+    price: 480,
     duration: 30,
     image: '/images/uprava_vousu.JPG',
     hasImage: true
@@ -71,11 +66,19 @@ const services: Service[] = [
     id: 'father-son',
     title: 'Táta a syn (7-12let)',
     description: 'Gentleman\'s heritage. Výjimečný okamžik, kdy otec zasvěcuje syna do rituálu péče o vzhled. Dva mistrovské střihy a jedna cenná lekce o tom, jak se stát pravým mužem.',
-    priceFrom: Math.ceil((980 * 0.7) / 10) * 10,
-    priceTo: 980,
+    price: 980,
     duration: 90,
-    image: '/images/svetlo.jpg',
-    hasImage: false
+    image: '/images/tata_syn.jpg',
+    hasImage: true
+  },
+  {
+    id: 'child-cut',
+    title: 'Dětský střih',
+    description: 'Tradiční řemeslo s citlivým přístupem. Precizní střihy, které zvládneme i s tím nejneklidnějším malým zákazníkem. Klasická technika s trpělivostí a hravostí pro rodiče, kteří chtějí svému dítěti dopřát profesionální péči bez stresu a slz.',
+    price:480,
+    duration: 90,
+    image: '/images/detsky_strih.jpg',
+    hasImage: true
   },
   {
     id: 'hair-tattoo',
