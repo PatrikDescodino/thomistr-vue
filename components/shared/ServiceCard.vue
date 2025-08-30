@@ -7,22 +7,29 @@
       {{ popularText }}
     </div>
     
-    <div class="aspect-w-16 aspect-h-9 bg-dark-800 rounded-lg overflow-hidden mb-6 vintage-frame relative border-2 border-white/20">
+    <div class="bg-dark-800 rounded-lg overflow-hidden mb-6 vintage-frame relative border-2 border-white/20">
       <!-- Image placeholder for missing images -->
-      <div v-if="!hasImage" class="w-full h-48 bg-dark-700 flex items-center justify-center">
+      <div v-if="!hasImage" class="w-full h-48 md:h-56 lg:h-64 bg-dark-700 flex items-center justify-center">
         <div class="text-center">
           <div class="text-gray-400 text-4xl mb-2">✕</div>
           <div class="text-gray-400 text-sm font-semibold">Obrázek nyní není k dispozici</div>
         </div>
       </div>
       
-      <!-- Actual image -->
-      <img 
+      <!-- Actual image with better responsive handling -->
+      <div 
         v-else
-        :src="image" 
-        :alt="title"
-        class="w-full h-48 object-cover filter sepia-[0.3] saturate-75"
-      />
+        class="w-full h-48 md:h-56 lg:h-64 relative"
+      >
+        <img 
+          :src="image" 
+          :alt="title"
+          class="w-full h-full object-contain md:object-cover lg:object-contain xl:object-cover filter sepia-[0.3] saturate-75 bg-dark-900 transition-all duration-300"
+          :style="imagePositioning ? `object-position: ${imagePositioning}` : 'object-position: center'"
+        />
+        <!-- Overlay for better text visibility if needed -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
+      </div>
     </div>
     
     <div class="p-2">
@@ -69,11 +76,13 @@ interface Props {
   popularText?: string
   originalPrice?: number
   hasImage?: boolean
+  imagePositioning?: string
 }
 
 withDefaults(defineProps<Props>(), {
   isPopular: false,
   popularText: 'OBLÍBENÉ',
-  hasImage: true
+  hasImage: true,
+  imagePositioning: 'center'
 })
 </script>

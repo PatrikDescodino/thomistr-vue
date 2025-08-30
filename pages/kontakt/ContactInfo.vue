@@ -74,7 +74,7 @@
               width="100%" 
               height="450" 
               style="border:0;" 
-              allowfullscreen="" 
+              allowfullscreen="true" 
               loading="lazy" 
               referrerpolicy="no-referrer-when-downgrade"
               title="Mapa - Barber Shop Thomistr, Kralovice"
@@ -144,7 +144,7 @@ const contacts: ContactInfo[] = [
   {
     id: 'hours',
     title: 'Provozní doba',
-    value: ['Středa: 08:00–17:00', 'Pátek: 08:00–17:00'],
+    value: ['Pondělí: 08:00–17:00','Středa: 08:00–17:00', 'Pátek: 08:00–17:00'],
     icon: ClockIcon
   },
   {

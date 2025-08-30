@@ -8,8 +8,11 @@
         </p>
       </div>
       
-      <div class="text-center">
-        <iframe src="https://barber-shop-thomistr.reservio.com" width="800px" height="500px" frameborder="0" class="rounded-lg"></iframe>
+      <div class="reservio-button-container flex justify-center"
+         data-text="Rezervujte si termín"
+         data-size="large"
+         data-color="#7F6836"
+         data-url="https://barber-shop-thomistr.reservio.com">
       </div>
       
       <div class="mt-6 p-4 bg-gold-600/10 rounded-lg border-2 border-gold-600/30 hover:border-gold-600/50 transition-colors duration-300">
@@ -30,6 +33,8 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
+
 interface ImportantInfo {
   id: string
   text: string
@@ -49,4 +54,12 @@ const importantInfo: ImportantInfo[] = [
     text: 'Při první návštěvě doporučujeme dorazit 5 minut před termínem'
   }
 ]
+
+onMounted(() => {
+  // Načtení Reservio widgetu
+  const script = document.createElement('script')
+  script.src = 'https://cdn.reservio.com/widget/button-bundle.js'
+  script.async = true
+  document.head.appendChild(script)
+})
 </script>

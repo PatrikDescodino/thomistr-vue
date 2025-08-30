@@ -69,15 +69,15 @@ const reservationMethods: ReservationMethod[] = [
     linkType: 'a',
     buttonText: '+420 733 666 092',
     buttonClass: 'btn-primary',
-    additionalInfo: 'Středa, Pátek: 8:00 - 17:00<br>Soboty dle domluvy'
+    additionalInfo: 'Pondělí,Středa, Pátek: 8:00 - 17:00<br>Soboty dle domluvy'
   },
   {
     id: 'walk-in',
     title: 'Přijďte osobně',
     description: 'Navštivte nás přímo v salonu. Obsloužíme vás, pokud máme volnou kapacitu',
     icon: LocationIcon,
-    link: '/kontakt',
-    linkType: 'NuxtLink',
+    link: 'https://www.google.com/maps/dir//Barber+shop+Thomistr,+n%C3%A1m.+Osvobozen%C3%AD+84,+331+41+Kralovice/@49.9807167,13.4052581,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x470a5bdcfb20a0bb:0xdbcb726b6e21d73e!2m2!1d13.4876054!2d49.980648?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D',
+    linkType: 'a',
     buttonText: 'Zobrazit adresu',
     buttonClass: 'btn-secondary',
     additionalInfo: 'nám. Osvobození 84<br>331 41 Kralovice'

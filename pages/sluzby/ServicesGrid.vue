@@ -18,6 +18,8 @@ interface Service {
   title: string
   description: string
   price:number
+  priceFrom?: number
+  priceTo?: number
   duration: number
   image: string
   isPopular?: boolean
@@ -77,18 +79,19 @@ const services: Service[] = [
     description: 'Tradiční řemeslo s citlivým přístupem. Precizní střihy, které zvládneme i s tím nejneklidnějším malým zákazníkem. Klasická technika s trpělivostí a hravostí pro rodiče, kteří chtějí svému dítěti dopřát profesionální péči bez stresu a slz.',
     price:480,
     duration: 90,
-    image: '/images/detsky_strih.jpg',
+    image: '/images/detsky_strih_2.jpg',
     hasImage: true
   },
   {
     id: 'hair-tattoo',
     title: 'Hair Tattoo',
     description: 'Tradiční řemeslo s uměleckým přesahem. Precizní vyholené vzory, které podtrhnou váš osobitý styl. Klasická technika s moderním nádechem pro muže, který se nebojí vystoupit z řady.',
+    price: 0,
     priceFrom: -1,
     priceTo: -1,
     duration: 90,
-    image: '/images/palka.jpg',
-    hasImage: false
+    image: '/images/hair_tattoo.jpg',
+    hasImage: true
   }
 ]
 </script>
